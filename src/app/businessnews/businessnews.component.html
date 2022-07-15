@@ -1,0 +1,21 @@
+<!-- <p>businessnews works!</p> -->
+
+<h4><marquee class="text-success mt-4 mb-3" direction="right">Top business headlines around the world</marquee></h4>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let nd of business| filter:searchKey: 'title'">
+            <div class="card card1 mt-4 mb-4 ms-3 me-4" style="width: 18rem;height: 560px;" >
+                <img class="card-img-top mb-2 img-fluid" src="{{nd.urlToImage}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title mb-2">{{nd.title}}</h5>
+                  <p class="card-text mb-3">{{nd.content}}</p>
+                  <a href="{{nd.url}}" class="btn btn-primary" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
